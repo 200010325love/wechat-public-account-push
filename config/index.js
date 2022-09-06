@@ -108,12 +108,6 @@ export const config = {
     {"keyword": "love_day", date: "2011-10-01"},
   ],
 
-  /** 插槽 */
-
-  /** 你可以在这里写超多的你想显示的内容了！
-    * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
-    * 比如：keyword: "lover_prattle" ，在测试号中就是 {{ lover_prattle.DATA }} 
-    * */
   SLOT_LIST: [
     // 这样配置的话，就会每次随机选一句话发送
     {"keyword": "lover_prattle", contents: [
