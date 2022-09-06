@@ -7,10 +7,10 @@ export const config = {
   // APP_ID: "wx7a75fe504468b549",
   // 公众号APP_SECRET 
   // APP_SECRET: "9e7a266e693a704096e2a3a8cd97c68d",
-  // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-  //id: "oAaBv6fuZ4yqz_VtdPEBDCInSqMo",
-  // 你想对他发送的模板消息的模板ID
-  //useTemplateId: "3HzlGGuB6wgWAeU1QOygZMRPIa3cl2XvXLw3ob4GUgc",
+  //模板消息id
+  TEMPLATE_ID:"3HzlGGuB6wgWAeU1QOygZMRPIa3cl2XvXLw3ob4GUgc",
+  //接收公众号消息的微信号，如果多个，如["wx1","wx2"]
+  USERS:["oAaBv6fuZ4yqz_VtdPEBDCInSqMo"],
   
   /**
    * 信息配置
@@ -25,30 +25,21 @@ export const config = {
 
   /** 重要节日相关 */
 
-  /**
-   * 重要节日，修改名字为对应需要显示的名字, data 仅填月日即可, 请严格按照示例填写
-   * tpye必须填！ 只能 “生日” 和 “节日” 二选一!
-   * 生日时，name填写想要展示的名字，你可以填“美丽可爱亲亲老婆”
-   * 节日时，name填写相应展示的节日，你可以填“被搭讪纪念日”
-   */
+  //重要节日，修改名字为对应需要显示的名字, data 仅填月日即可, 请严格按照示例填写
+  // tpye必须填！ 只能 “生日” 和 “节日” 二选一!
+  // 生日时，name填写想要展示的名字，你可以填“美丽可爱亲亲老婆”
+  // 节日时，name填写相应展示的节日，你可以填“被搭讪纪念日”
   FESTIVALS: [
     {"type": "生日", "name": "王夫人", "year": "1999", "date": "06-10"},
     {"type": "生日", "name": "王先生", "year": "2001", "date": "03-25"},
   ],
-
-  /**
-   * 限制重要节日的展示条目, 需要填写数字; 
-   * 如果为3, 则仅展示“将要到达” 的3个重要节日提醒，剩下的将被忽略
-   * 如果为0, 则默认展示全部
-   */
+  // 限制重要节日的展示条目, 需要填写数字; 
+  // 如果为3, 则仅展示“将要到达” 的3个重要节日提醒，剩下的将被忽略
+  // 如果为0, 则默认展示全部
   FESTIVALS_LIMIT: 4,
 
   /** 日期相关 */
-
-  /** 你现在可以随心增加你认为的所有的需要纪念的日子啦！
-    * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
-    * 比如：keyword: "love_date" ，在测试号中就是 {{ love_date.DATA }} 
-    * */
+  
   CUSTOMIZED_DATE_LIST: [
     // 在一起的日子
     {"keyword": "love_day", date: "2011-10-01"},
