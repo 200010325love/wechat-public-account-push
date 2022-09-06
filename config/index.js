@@ -3,13 +3,68 @@ export const config = {
    * 公众号配置
    */
 
-  // 公众号APP_ID
-  APP_ID: "wx7a75fe504468b549",
-  // 公众号APP_SECRET
-  APP_SECRET: "9e7a266e693a704096e2a3a8cd97c68d",
-  //模板消息id
-  TEMPLATE_ID:"3HzlGGuB6wgWAeU1QOygZMRPIa3cl2XvXLw3ob4GUgc",
-  USERS: ["oAaBv6fuZ4yqz_VtdPEBDCInSqMo"],
+  // 公众号APP_ID 
+  // APP_ID: "wx7a75fe504468b549",
+
+  // 公众号APP_SECRET 
+  // APP_SECRET: "9e7a266e693a704096e2a3a8cd97c68d",
+
+  /**
+   * 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如
+   * [
+   *  {
+   *    // 想要发送的人的名字
+   *    name: "王夫人",
+   *    // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+   *    id: "oAaBv6fuZ4yqz_VtdPEBDCInSqMo",
+   *    // 你想对他发送的模板消息的模板ID
+   *    useTemplateId: "3HzlGGuB6wgWAeU1QOygZMRPIa3cl2XvXLw3ob4GUgc",
+   *    // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+   *    openUrl: "https://wangxinleo.cn"
+   *   }, 
+   * ]
+   */
+  USERS: [
+    {
+      // 想要发送的人的名字
+      name: "王夫人",
+      // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: "oAaBv6fuZ4yqz_VtdPEBDCInSqMo",
+      // 你想对他发送的模板消息的模板ID
+      useTemplateId: "3HzlGGuB6wgWAeU1QOygZMRPIa3cl2XvXLw3ob4GUgc",
+      // 所在省份
+      province: "甘肃",
+      // 所在城市
+      city: "白银",
+      // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+      openUrl: "https://wangxinleo.cn"
+    }, 
+    {
+      name: "王夫人", 
+      id: "",
+      useTemplateId: "",
+      province: "",
+      city: "",
+      openUrl: "https://wangxinleo.cn"
+    }, 
+  ],
+
+  /**
+   * 回调消息 相关，主要用来展示发送是否成功/失败的数据
+   */
+
+  // 回调消息模板id, 用来看自己有没有发送成功的那个模板
+  CALLBACK_TEMPLATE_ID: "zjV1glIuCXo4Csr23aXWEio1iP74sZJ7IQEES95lDsg6c4yOU",
+
+  // 接收成功回调消息的微信号，（一般来说只填自己的微信号, name填不填无所谓）
+  CALLBACK_USERS: [
+    {
+      // 一般都填自己
+      name: "自己",
+      // 自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: "oAaBv6fzGzNOta74Vu5FfSWNhubo",
+    }, 
+  ],
     
   /**
    * 信息配置
@@ -31,9 +86,9 @@ export const config = {
    * 节日时，name填写相应展示的节日，你可以填“被搭讪纪念日”
    */
   FESTIVALS: [
-    {"type": "生日", "name": "王夫人", "year": "1999", "date": "04-27"},
+    {"type": "生日", "name": "王夫人", "year": "1999", "date": "06-10"},
     {"type": "生日", "name": "王先生", "year": "2001", "date": "03-25"},
-    ],
+  ],
 
   /**
    * 限制重要节日的展示条目, 需要填写数字; 
@@ -50,7 +105,7 @@ export const config = {
     * */
   CUSTOMIZED_DATE_LIST: [
     // 在一起的日子
-    {"keyword": "love_day", date: "2017-10-01"},
+    {"keyword": "love_day", date: "2011-10-01"},
   ],
 
   /** 插槽 */
@@ -69,6 +124,11 @@ export const config = {
     ]},
   ],
 
- 
+  /** 每日一言 */
+
+  // 好文节选的内容类型
+  // 可以填写【动画，漫画，游戏，小说，原创，网络，其他】； 随机则填写 ""
+  LITERARY_PREFERENCE: ""
+
 
 }
